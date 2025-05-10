@@ -4,99 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$BAND - Bulls Are Never Dead</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      background-color: black;
+      background-color: #000;
       color: white;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Chakra Petch', sans-serif;
     }
     .topbar {
-      background: #000;
+      background: #0a0a0a;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
     }
     .topbar .socials a {
-      margin-left: 20px;
-      text-decoration: none;
+      margin-left: 15px;
       color: #22c55e;
-      font-size: 1.1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
     .topbar .socials a:hover {
-      color: #16a34a;
+      color: #00ff99;
+    }
+    .scroll-banner {
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      padding: 10px 0;
+      text-align: center;
+      animation: scroll 30s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
+      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
     }
     header img {
-      width: 150px;
-      margin-bottom: 20px;
+      width: 160px;
+      transition: transform 0.4s ease;
+    }
+    header img:hover {
+      transform: scale(1.1) rotate(-3deg);
     }
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
+      font-size: 3.2rem;
+      margin: 20px 0 10px;
+      color: #22c55e;
     }
     .tagline {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: #ccc;
       margin-bottom: 30px;
     }
     .btn-buy {
       background-color: #22c55e;
       color: black;
-      padding: 15px 30px;
+      padding: 15px 35px;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      transition: 0.3s;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: all 0.3s;
     }
     .btn-buy:hover {
       background-color: #16a34a;
+      box-shadow: 0 0 15px #00ff9988;
     }
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       text-align: center;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
       color: #00ff99;
     }
-    .tokenomics ul {
+    .tokenomics ul, .roadmap-list {
       list-style: none;
       padding: 0;
     }
-    .tokenomics li {
-      margin: 10px 0;
+    .tokenomics li, .roadmap-list li {
+      margin: 15px 0;
       font-size: 1.1rem;
+      text-align: left;
     }
     .giveaway {
-      font-size: 1.2rem;
-      margin-top: 40px;
+      font-size: 1.3rem;
       color: #FFD700;
+      margin-top: 40px;
     }
-    .roadmap-list {
+    .whyband {
+      margin-top: 50px;
+      background: #111;
+      padding: 40px 30px;
+      border-radius: 12px;
+    }
+    .whyband ul {
+      list-style: none;
+      padding: 0;
+    }
+    .whyband li {
+      font-size: 1.1rem;
+      margin: 12px 0;
       text-align: left;
-      max-width: 700px;
-      margin: auto;
-    }
-    .roadmap-list li {
-      margin-bottom: 20px;
-      line-height: 1.6;
     }
     .meme-section {
       margin-top: 40px;
     }
     .meme-section img {
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
       border-radius: 10px;
     }
     footer {
@@ -109,17 +135,18 @@
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="logo-area">
-      <img src="logo.png" alt="$BAND logo" style="height:50px;">
-    </div>
-    <div class="socials">
-    <a href="https://t.me/bandonsol" target="_blank" rel="noopener">Telegram</a>
-    <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener">Twitter</a>
-    </div>
-  </div>
+  <div class="socials">
+  <a href="https://t.me/yourbandtelegram" target="_blank" rel="noopener noreferrer" aria-label="Join us on Telegram">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a href="https://twitter.com/yourbandtwitter" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+</div>
+  <div class="scroll-banner">🔥 $BAND IS LIVE – BUY ON PUMP.FUN • $1,000 GIVEAWAY AT $100K MC • BULLS NEVER DIE 🔥</div>
 
   <header>
+    <img src="logo.png" alt="$BAND logo">
     <h1>Bulls Are Never Dead</h1>
     <p class="tagline">This is your invitation to WIN.</p>
     <a class="btn-buy" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
@@ -134,10 +161,6 @@
       Welcome to <strong>$BAND</strong> — a testament to strength,
       resilience, and the destruction of the BEARS.
     </p>
-    <p>
-      This is for those who send it without fear, who stack without doubt,
-      and who run a legacy to show BULLS ARE NEVER DEAD.
-    </p>
     <div class="giveaway">
       🎉 $1,000 Giveaway once we hit $100,000 Market Cap! Join early and ride with the bulls.
     </div>
@@ -145,23 +168,33 @@
 
   <section class="tokenomics">
     <h2>TOKENOMICS</h2>
-    <p>Zero taxes, zero bullshit — just pure vibes.</p>
     <ul>
       <li>✅ LP Burned</li>
       <li>✅ Ownership Renounced</li>
+      <li>✅ Dev tokens locked for 2 years</li>
+      <li>✅ Zero Taxes • 100% Degen Energy</li>
       <li>✅ Contract: 0xYourRealContractAddress</li>
-      <li>🔒 Dev tokens locked for 2 years</li>
+    </ul>
+  </section>
+
+  <section class="whyband">
+    <h2>WHY BUY $BAND?</h2>
+    <ul>
+      <li>🐂 It's more than a meme – it's a movement.</li>
+      <li>🔥 Early holders get access to $1,000+ in giveaways.</li>
+      <li>👑 Renounced contract, burned LP – fully degen proof.</li>
+      <li>🚀 No roadmap fluff – just bullish community and vibes.</li>
     </ul>
   </section>
 
   <section class="roadmap">
     <h2>ROADMAP</h2>
     <ul class="roadmap-list">
-      <li><strong>Phase 1:</strong> Launch on Pump.fun, community building, early memes and organic shilling.</li>
-      <li><strong>Phase 2:</strong> Hit $100K market cap — trigger $1,000 giveaway, expand presence on CT & TG.</li>
-      <li><strong>Phase 3:</strong> CMC & CG listings, meme contests, influencer raids, launch animations.</li>
-      <li><strong>Phase 4:</strong> Cross-platform integrations, NFT drops, secret bull utility reveal.</li>
-      <li><strong>Phase 5:</strong> Bull Market dominance. We take over degen land, merch drops & more!</li>
+      <li><strong>Phase 1:</strong> Stealth Launch, Pump.fun listing, early meme drops.</li>
+      <li><strong>Phase 2:</strong> Reach $100K MC → trigger $1K giveaway + community raids.</li>
+      <li><strong>Phase 3:</strong> CoinMarketCap / CoinGecko listings + NFT reward teasers.</li>
+      <li><strong>Phase 4:</strong> Meme war campaigns, bull utility preview, merch drops.</li>
+      <li><strong>Phase 5:</strong> Degen dominance. Collabs, alpha group integrations, and more.</li>
     </ul>
   </section>
 
