@@ -4,28 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$BAND - Bulls Are Never Dead</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background-color: black;
       color: white;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Bebas Neue', sans-serif;
       text-align: center;
     }
     header {
-      padding: 50px 20px 20px;
+      padding: 30px 20px 20px;
     }
     header img {
       width: 150px;
       margin-bottom: 20px;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 10px;
       text-transform: uppercase;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .tagline {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: #ccc;
       margin-bottom: 30px;
     }
@@ -37,10 +43,12 @@
       text-decoration: none;
       border-radius: 8px;
       font-size: 1.1rem;
-      transition: 0.3s;
+      transition: all 0.3s;
+      box-shadow: 0 0 10px #22c55e60;
     }
     .btn-buy:hover {
       background-color: #16a34a;
+      box-shadow: 0 0 20px #22c55eaa;
     }
     section {
       padding: 60px 20px;
@@ -48,38 +56,31 @@
       margin: auto;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
       color: #00ff99;
     }
-    .tokenomics ul {
+    .tokenomics ul, .roadmap ul {
       list-style: none;
       padding: 0;
     }
-    .tokenomics li {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-    .socials {
-      margin-top: 40px;
-    }
-    .socials a {
-      display: inline-block;
-      margin: 0 15px;
-      text-decoration: none;
-      color: #22c55e;
-      font-size: 1.2rem;
-    }
-    .socials a:hover {
-      color: #16a34a;
-    }
-    .roadmap ul {
-      list-style: none;
-      padding: 0;
-    }
-    .roadmap li {
+    .tokenomics li, .roadmap li {
       margin: 15px 0;
       font-size: 1.1rem;
+    }
+    nav.socials-top {
+      padding: 10px 0 5px;
+      background-color: #111;
+      border-bottom: 1px solid #333;
+    }
+    nav.socials-top a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #22c55e;
+      font-size: 1rem;
+    }
+    nav.socials-top a:hover {
+      color: #16a34a;
     }
     footer {
       margin-top: 60px;
@@ -90,6 +91,11 @@
   </style>
 </head>
 <body>
+  <nav class="socials-top">
+    <a href="https://t.me/bandonsol" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener">Twitter</a>
+  </nav>
+
   <header>
     <img src="logo.png" alt="$BAND logo" />
     <h1>Bulls Are Never Dead</h1>
@@ -131,15 +137,6 @@
       <li>🔥 Phase 4 – Burn Events & Meme Takeover</li>
       <li>🌕 Phase 5 – Moon Mission & NFT Integration</li>
     </ul>
-  </section>
-
-  <section class="socials">
-    <h2>Join the Community</h2>
-    <p>
-      Follow us and stay up to date with the $BAND movement:
-    </p>
-    <a href="https://t.me/bandonsol" target="_blank" rel="noopener">Telegram</a>
-    <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener">Twitter</a>
   </section>
 
   <footer>
