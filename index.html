@@ -10,26 +10,29 @@
       background-color: black;
       color: white;
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
     }
-    header {
-      padding: 20px;
-      position: relative;
+    .topbar {
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
-    .top-socials {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .top-socials a {
-      margin: 0 10px;
+    .topbar .socials a {
+      margin-left: 20px;
       text-decoration: none;
       color: #22c55e;
-      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .topbar .socials a:hover {
+      color: #16a34a;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
     }
     header img {
       width: 150px;
-      margin-top: 40px;
       margin-bottom: 20px;
     }
     h1 {
@@ -57,8 +60,9 @@
     }
     section {
       padding: 60px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      text-align: center;
     }
     h2 {
       font-size: 2rem;
@@ -74,45 +78,48 @@
       font-size: 1.1rem;
     }
     .giveaway {
-      background: linear-gradient(90deg, #00ff99, #22c55e);
-      padding: 30px 20px;
-      margin: 50px auto;
-      color: black;
-      border-radius: 10px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      margin-top: 40px;
+      color: #FFD700;
+    }
+    .roadmap-list {
+      text-align: left;
       max-width: 700px;
+      margin: auto;
     }
-    .giveaway strong {
-      font-size: 1.6rem;
+    .roadmap-list li {
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
-    .socials {
+    .meme-section {
       margin-top: 40px;
     }
-    .socials a {
-      display: inline-block;
-      margin: 0 15px;
-      text-decoration: none;
-      color: #22c55e;
-      font-size: 1.2rem;
-    }
-    .socials a:hover {
-      color: #16a34a;
+    .meme-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
     }
     footer {
       margin-top: 60px;
       padding: 30px;
       font-size: 0.9rem;
       color: #666;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="top-socials">
-      <a href="https://t.me/yourbandtelegram" target="_blank">Telegram</a>
-      <a href="https://twitter.com/yourbandtwitter" target="_blank">Twitter</a>
+  <div class="topbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="$BAND logo" style="height:50px;">
     </div>
-    <img src="logo.png" alt="$BAND logo" />
+    <div class="socials">
+    <a href="https://t.me/bandonsol" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+
+  <header>
     <h1>Bulls Are Never Dead</h1>
     <p class="tagline">This is your invitation to WIN.</p>
     <a class="btn-buy" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
@@ -131,6 +138,9 @@
       This is for those who send it without fear, who stack without doubt,
       and who run a legacy to show BULLS ARE NEVER DEAD.
     </p>
+    <div class="giveaway">
+      🎉 $1,000 Giveaway once we hit $100,000 Market Cap! Join early and ride with the bulls.
+    </div>
   </section>
 
   <section class="tokenomics">
@@ -140,25 +150,24 @@
       <li>✅ LP Burned</li>
       <li>✅ Ownership Renounced</li>
       <li>✅ Contract: 0xYourRealContractAddress</li>
+      <li>🔒 Dev tokens locked for 2 years</li>
     </ul>
   </section>
 
-  <section class="giveaway">
-    <strong>$1,000 Giveaway at $100K Market Cap!</strong>
-    <p>
-      Stay bullish and get rewarded. When $BAND hits a $100K market cap,
-      we’re giving away $1,000 to the community. Join now and don’t miss out!
-    </p>
-    <a class="btn-buy" href="https://t.me/yourbandtelegram" target="_blank">Join Telegram to Qualify</a>
+  <section class="roadmap">
+    <h2>ROADMAP</h2>
+    <ul class="roadmap-list">
+      <li><strong>Phase 1:</strong> Launch on Pump.fun, community building, early memes and organic shilling.</li>
+      <li><strong>Phase 2:</strong> Hit $100K market cap — trigger $1,000 giveaway, expand presence on CT & TG.</li>
+      <li><strong>Phase 3:</strong> CMC & CG listings, meme contests, influencer raids, launch animations.</li>
+      <li><strong>Phase 4:</strong> Cross-platform integrations, NFT drops, secret bull utility reveal.</li>
+      <li><strong>Phase 5:</strong> Bull Market dominance. We take over degen land, merch drops & more!</li>
+    </ul>
   </section>
 
-  <section class="socials">
-    <h2>Join the Community</h2>
-    <p>
-      Follow us and stay up to date with the $BAND movement:
-    </p>
-    <a href="https://t.me/bandonsol" target="_blank" rel="noopener">Telegram</a>
-    <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener">Twitter</a>
+  <section class="meme-section">
+    <h2>VIBES GALLERY</h2>
+    <img src="meme1.jpg" alt="$BAND Meme">
   </section>
 
   <footer>
