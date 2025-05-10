@@ -21,6 +21,22 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+  .meme-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.meme-grid img {
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.meme-grid img:hover {
+  transform: scale(1.05);
+}
+
 </style>
 
 </head>
@@ -97,7 +113,7 @@
     <img src="memes/memes-2.png" alt="BAND Meme 2">
     <img src="memes/memes-3.png" alt="BAND Meme 3">
     <img src="memes/memes-4.png" alt="BAND Meme 4">
-    <img src="meme/meme-5.jpg" alt="BAND Meme 5">
+    <img src="memes/meme-5.jpg" alt="BAND Meme 5">
   </div>
 </section>
 
