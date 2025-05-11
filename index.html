@@ -38,7 +38,7 @@
       color: #22c55e;
       text-decoration: none;
       font-size: 2.2rem;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
     .topbar .socials a:hover {
       color: #00ff99;
@@ -58,7 +58,7 @@
       padding: 80px 20px 60px;
     }
     header img {
-      width: 280px;
+      width: 320px;
       height: auto;
       max-width: 100%;
       margin-bottom: 20px;
@@ -90,6 +90,23 @@
     .btn-buy:hover {
       background-color: #16a34a;
       box-shadow: 0 0 15px #00ff9988;
+    }
+    .contract-box {
+      margin-top: 15px;
+      font-size: 1rem;
+      background-color: #111;
+      color: #00ff99;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: all; /* for Safari */
+      user-select: all;         /* for modern browsers */
+      border: 1px dashed #00ff99;
+    }
+    .contract-box:hover {
+      background-color: #1a1a1a;
+      box-shadow: 0 0 10px #00ff99cc;
     }
     section {
       padding: 60px 20px;
@@ -153,6 +170,18 @@
       text-align: center;
     }
   </style>
+  <script>
+    function copyContract() {
+      const address = '0xYourRealContractAddress';
+      navigator.clipboard.writeText(address).then(() => {
+        const box = document.querySelector('.contract-box');
+        box.textContent = '✅ Copied to clipboard!';
+        setTimeout(() => {
+          box.textContent = '📋 0xYourRealContractAddress';
+        }, 2000);
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="topbar">
@@ -160,79 +189,79 @@
       <img src="logo.png" alt="$BAND logo">
     </div>
     <div class="socials">
-      <a href="https://t.me/yourbandtelegram" target="_blank" rel="noopener" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="https://twitter.com/yourbandtwitter" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/bandonsol" target="_blank" rel="noopener" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/bandonsol?s=21" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
+<div class="scroll-banner">🔥 $BAND IS LIVE – BUY ON PUMP.FUN • $1,000 GIVEAWAY AT $100K MC • BULLS NEVER DIE 🔥</div>
 
-  <div class="scroll-banner">🔥 $BAND IS LIVE – BUY ON PUMP.FUN • $1,000 GIVEAWAY AT $100K MC • BULLS NEVER DIE 🔥</div>
+<header>
+  <img src="logo.png" alt="$BAND logo">
+  <h1>Bulls Are Never Dead</h1>
+  <p class="tagline">This is your invitation to WIN.</p>
+  <a class="btn-buy" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
+  <div class="contract-box" onclick="copyContract()">📋 0xYourRealContractAddress</div>
+</header>
 
-  <header>
-    <img src="logo.png" alt="$BAND logo">
-    <h1>Bulls Are Never Dead</h1>
-    <p class="tagline">This is your invitation to WIN.</p>
-    <a class="btn-buy" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
-  </header>
+<section class="about">
+  <h2>WHAT IS $BAND?</h2>
+  <p>
+    In a world where only the bulls thrive and the fearless charge ahead,
+    this is your invitation to WIN.
+    Embrace the unbreakable spirit of the BULL RUN!
+    Welcome to <strong>$BAND</strong> — a testament to strength,
+    resilience, and the destruction of the BEARS.
+  </p>
+  <div class="giveaway">
+    🎉 $1,000 Giveaway once we hit $100,000 Market Cap! Join early and ride with the bulls.
+  </div>
+</section>
 
-  <section class="about">
-    <h2>WHAT IS $BAND?</h2>
-    <p>
-      In a world where only the bulls thrive and the fearless charge ahead,
-      this is your invitation to WIN.
-      Embrace the unbreakable spirit of the BULL RUN!
-      Welcome to <strong>$BAND</strong> — a testament to strength,
-      resilience, and the destruction of the BEARS.
-    </p>
-    <div class="giveaway">
-      🎉 $1,000 Giveaway once we hit $100,000 Market Cap! Join early and ride with the bulls.
-    </div>
-  </section>
+<section class="tokenomics">
+  <h2>TOKENOMICS</h2>
+  <ul>
+    <li>✅ LP Burned</li>
+    <li>✅ Ownership Renounced</li>
+    <li>✅ Dev tokens locked for 2 years</li>
+    <li>✅ Zero Taxes • 100% Degen Energy</li>
+    <li>✅ Contract: 0xYourRealContractAddress</li>
+  </ul>
+</section>
 
-  <section class="tokenomics">
-    <h2>TOKENOMICS</h2>
-    <ul>
-      <li>✅ LP Burned</li>
-      <li>✅ Ownership Renounced</li>
-      <li>✅ Dev tokens locked for 2 years</li>
-      <li>✅ Zero Taxes • 100% Degen Energy</li>
-      <li>✅ Contract: 0xYourRealContractAddress</li>
-    </ul>
-  </section>
+<section class="whyband">
+  <h2>WHY BUY $BAND?</h2>
+  <ul>
+    <li>🐂 It's more than a meme – it's a movement.</li>
+    <li>🔥 Early holders get access to $1,000+ in giveaways.</li>
+    <li>👑 Renounced contract, burned LP – fully degen proof.</li>
+    <li>🚀 No roadmap fluff – just bullish community and vibes.</li>
+  </ul>
+</section>
 
-  <section class="whyband">
-    <h2>WHY BUY $BAND?</h2>
-    <ul>
-      <li>🐂 It's more than a meme – it's a movement.</li>
-      <li>🔥 Early holders get access to $1,000+ in giveaways.</li>
-      <li>👑 Renounced contract, burned LP – fully degen proof.</li>
-      <li>🚀 No roadmap fluff – just bullish community and vibes.</li>
-    </ul>
-  </section>
+<section class="roadmap">
+  <h2>ROADMAP</h2>
+  <ul class="roadmap-list">
+    <li><strong>Phase 1:</strong> Stealth Launch, Pump.fun listing, early meme drops.</li>
+    <li><strong>Phase 2:</strong> Hit $100K MC → $1K giveaway + raid-to-earn & Telegram sprint.</li>
+    <li><strong>Phase 3:</strong> CoinMarketCap & CoinGecko listings, teaser NFTs for diamond hands.</li>
+    <li><strong>Phase 4:</strong> Bullish partnerships, branded meme campaigns, merch rollout.</li>
+    <li><strong>Phase 5:</strong> Dev token vault unlocks after 2 years. Ecosystem sneak peek. Bulls run forever.</li>
+  </ul>
+</section>
 
-  <section class="roadmap">
-    <h2>ROADMAP</h2>
-    <ul class="roadmap-list">
-      <li><strong>Phase 1:</strong> Stealth Launch, Pump.fun listing, early meme drops.</li>
-      <li><strong>Phase 2:</strong> Hit $100K MC → $1K giveaway + raid-to-earn & Telegram sprint.</li>
-      <li><strong>Phase 3:</strong> CoinMarketCap & CoinGecko listings, teaser NFTs for diamond hands.</li>
-      <li><strong>Phase 4:</strong> Bullish partnerships, branded meme campaigns, merch rollout.</li>
-      <li><strong>Phase 5:</strong> Dev token vault unlocks after 2 years. Ecosystem sneak peek. Bulls run forever.</li>
-    </ul>
-  </section>
+<section class="meme-section">
+  <h2>VIBES GALLERY</h2>
+  <div class="meme-grid">
+    <img src="memes/memes-1.png" alt="BAND Meme 1">
+    <img src="memes/memes-2.png" alt="BAND Meme 2">
+    <img src="memes/memes-3.png" alt="BAND Meme 3">
+    <img src="memes/memes-4.png" alt="BAND Meme 4">
+    <img src="meme/meme-5.jpg" alt="BAND Meme 5">
+  </div>
+</section>
 
-  <section class="meme-section">
-    <h2>VIBES GALLERY</h2>
-    <div class="meme-grid">
-      <img src="memes/memes-1.png" alt="BAND Meme 1">
-      <img src="memes/memes-2.png" alt="BAND Meme 2">
-      <img src="memes/memes-3.png" alt="BAND Meme 3">
-      <img src="memes/memes-4.png" alt="BAND Meme 4">
-      <img src="memes/meme-5.jpg" alt="BAND Meme 5">
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 $BAND. Bulls Forever. Bears Never.
-  </footer>
+<footer>
+  &copy; 2025 $BAND. Bulls Forever. Bears Never.
+</footer>
 </body>
 </html>
