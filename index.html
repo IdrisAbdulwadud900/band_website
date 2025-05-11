@@ -60,6 +60,24 @@
       color: #00ff99;
       transform: scale(1.2) rotate(10deg);
     }
+    .topbar-announcement {
+      background: #000;
+      color: #00ff99;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 12px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .topbar-announcement span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: slideText 20s linear infinite;
+    }
+    @keyframes slideText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
     .scroll-banner {
       background: #22c55e;
       color: black;
@@ -67,49 +85,38 @@
       padding: 10px 0;
       text-align: center;
       animation: scroll 30s linear infinite;
-      margin-top: 10px;
+      margin-top: 0;
       position: relative;
       z-index: 1;
     }
     header {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 50px 20px 30px;
+      z-index: 2;
       position: relative;
-      z-index: 1;
     }
     header img {
-      width: 320px;
+      width: 150px;
       height: auto;
-      max-width: 100%;
       margin-bottom: 20px;
-      transition: transform 0.4s ease;
     }
-    header img:hover {
-      transform: scale(1.1) rotate(-3deg);
-    }
-    h1 {
+    header h1 {
       font-size: 3rem;
-      margin: 20px 0 10px;
       color: #22c55e;
     }
     .tagline {
-      font-size: 1.3rem;
-      color: #ccc;
-      margin-bottom: 30px;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
     }
     .btn-buy {
-      background-color: #22c55e;
+      display: inline-block;
+      background: #22c55e;
       color: black;
-      padding: 15px 35px;
       font-weight: bold;
-      text-decoration: none;
+      padding: 12px 25px;
       border-radius: 10px;
-      font-size: 1.1rem;
-      transition: all 0.3s;
-    }
-    .btn-buy:hover {
-      background-color: #16a34a;
-      box-shadow: 0 0 15px #00ff9988;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
     .contract-box {
       margin-top: 15px;
@@ -120,85 +127,41 @@
       border-radius: 8px;
       display: inline-block;
       cursor: pointer;
-      -webkit-user-select: all;
-      user-select: all;
+      -webkit-user-select: all; /* for Safari */
+      user-select: all; /* for modern browsers */
       border: 1px dashed #00ff99;
     }
-    .contract-box:hover {
-      background-color: #1a1a1a;
-      box-shadow: 0 0 10px #00ff99cc;
-    }
     section {
-      padding: 60px 20px;
-      max-width: 960px;
+      padding: 50px 20px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
     }
     h2 {
+      color: #22c55e;
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #00ff99;
     }
-    .tokenomics ul, .roadmap-list {
+    ul {
       list-style: none;
       padding: 0;
     }
-    .tokenomics li, .roadmap-list li {
-      margin: 15px 0;
-      font-size: 1.1rem;
-      text-align: left;
-    }
-    .giveaway {
-      font-size: 1.2rem;
-      color: #FFD700;
-      margin-top: 40px;
-    }
-    .whyband {
-      margin-top: 50px;
-      background: #111;
-      padding: 40px 30px;
-      border-radius: 12px;
-    }
-    .whyband ul {
-      list-style: none;
-      padding: 0;
-    }
-    .whyband li {
-      font-size: 1.1rem;
-      margin: 12px 0;
-      text-align: left;
-    }
-    .meme-section {
-      margin-top: 40px;
-    }
-    .meme-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .meme-section img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
+    ul li {
+      margin-bottom: 12px;
+      font-size: 1rem;
     }
     footer {
-      margin-top: 60px;
+      text-align: center;
       padding: 30px;
       font-size: 0.9rem;
-      color: #666;
-      text-align: center;
+      color: #888;
     }
   </style>
   <script>
     function copyContract() {
       const address = '0xYourRealContractAddress';
       navigator.clipboard.writeText(address).then(() => {
-        const box = document.querySelector('.contract-box');
-        box.textContent = '✅ Copied to clipboard!';
-        setTimeout(() => {
-          box.textContent = '📋 0xYourRealContractAddress';
-        }, 2000);
+        alert("Contract address copied to clipboard!");
       });
     }
   </script>
@@ -214,6 +177,10 @@
     </div>
   </div>
 
+  <div class="topbar-announcement">
+    <span>📢 $BAND IS THE NEXT BIG THING! A MEME THAT'S GONNA SEND MILLIONS. BACKED BY VIBES. POWERED BY BULLS. 🐂💸</span>
+  </div>
+
   <div class="scroll-banner">🔥 $BAND IS LIVE – BUY ON PUMP.FUN • $1,000 GIVEAWAY AT $100K MC • BULLS NEVER DIE 🔥</div>
 
   <header>
@@ -221,64 +188,48 @@
     <h1>Bulls Are Never Dead</h1>
     <p class="tagline">This is your invitation to WIN.</p>
     <a class="btn-buy" href="https://pump.fun" target="_blank" rel="noopener">Buy on Pump.fun</a>
-    <div class="contract-box" onclick="copyContract()">📋 0xYourRealContractAddress</div>
+    <div class="contract-box" onclick="copyContract()">📋 Contract: 0xYourRealContractAddress (click to copy)</div>
   </header>
 
-  <section class="about">
-    <h2>WHAT IS $BAND?</h2>
-    <p>
-      In a world where only the bulls thrive and the fearless charge ahead,
-      this is your invitation to WIN.
-      Embrace the unbreakable spirit of the BULL RUN!
-      Welcome to <strong>$BAND</strong> — a testament to strength,
-      resilience, and the destruction of the BEARS.
-    </p>
-    <div class="giveaway">
-      🎉 $1,000 Giveaway once we hit $100,000 Market Cap! Join early and ride with the bulls.
-    </div>
+  <section>
+    <h2>What is $BAND?</h2>
+    <p>$BAND is a memecoin that embodies the fearless spirit of the bull market. It's not just hype—it's movement. It represents strength, community, and unwavering belief in making millions through pure vibes and bold conviction.</p>
   </section>
 
-  <section class="tokenomics">
-    <h2>TOKENOMICS</h2>
+  <section>
+    <h2>Tokenomics</h2>
     <ul>
       <li>✅ LP Burned</li>
       <li>✅ Ownership Renounced</li>
       <li>✅ Dev tokens locked for 2 years</li>
       <li>✅ Zero Taxes • 100% Degen Energy</li>
-      <li>✅ Contract: 0xYourRealContractAddress</li>
     </ul>
   </section>
 
-  <section class="whyband">
-    <h2>WHY BUY $BAND?</h2>
+  <section>
+    <h2>Why Buy $BAND?</h2>
     <ul>
-      <li>🐂 It's more than a meme – it's a movement.</li>
-      <li>🔥 Early holders get access to $1,000+ in giveaways.</li>
-      <li>👑 Renounced contract, burned LP – fully degen proof.</li>
-      <li>🚀 No roadmap fluff – just bullish community and vibes.</li>
+      <li>🐂 It's more than a meme – it's a movement</li>
+      <li>🔥 Early holders get access to $1,000+ in giveaways</li>
+      <li>👑 Renounced contract, burned LP – fully degen proof</li>
+      <li>🚀 No roadmap fluff – just bullish community and vibes</li>
     </ul>
   </section>
 
-  <section class="roadmap">
-    <h2>ROADMAP</h2>
-    <ul class="roadmap-list">
-      <li><strong>Phase 1:</strong> Stealth Launch, Pump.fun listing, early meme drops.</li>
-      <li><strong>Phase 2:</strong> Hit $100K MC → $1K giveaway + raid-to-earn & Telegram sprint.</li>
-      <li><strong>Phase 3:</strong> CoinMarketCap & CoinGecko listings, teaser NFTs for diamond hands.</li>
-      <li><strong>Phase 4:</strong> Bullish partnerships, branded meme campaigns, merch rollout.</li>
-      <li><strong>Phase 5:</strong> Dev token vault unlocks after 2 years. Ecosystem sneak peek. Bulls run forever.</li>
+  <section>
+    <h2>Roadmap</h2>
+    <ul>
+      <li><strong>Phase 1:</strong> Stealth Launch, Pump.fun listing, early meme drops</li>
+      <li><strong>Phase 2:</strong> Hit $100K MC → $1K giveaway + raid-to-earn</li>
+      <li><strong>Phase 3:</strong> CoinGecko & CMC listing, teaser NFTs</li>
+      <li><strong>Phase 4:</strong> Partnerships, Meme contests, Merch</li>
+      <li><strong>Phase 5:</strong> Vault unlocks after 2 years – long live $BAND</li>
     </ul>
   </section>
 
-  <section class="meme-section">
-    <h2>VIBES GALLERY</h2>
-    <div class="meme-grid">
-      <img src="memes/memes-1.png" alt="BAND Meme 1">
-      <img src="memes/memes-2.png" alt="BAND Meme 2">
-      <img src="memes/memes-3.png" alt="BAND Meme 3">
-      <img src="memes/memes-4.png" alt="BAND Meme 4">
-      <img src="memes/meme-5.jpg" alt="BAND Meme 5">
-    </div>
+  <section>
+    <h2>Vibes Gallery</h2>
+    <p>🔥 Our community vibes harder than the charts. Meme power lives here. More memes loading soon...</p>
   </section>
 
   <footer>
